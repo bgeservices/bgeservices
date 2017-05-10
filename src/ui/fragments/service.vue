@@ -17,6 +17,9 @@
                         <a class="btn btn-outline-primary btn-block"
                            :class="{'btn-outline-primary': service.isSecure, 'btn-outline-danger': !service.isSecure}"
                            :href="service.link"
+                           @click.stop.prevent="openLink($event)"
+                           @keydown.enter.stop.prevent="openLink($event)"
+                           @keydown.space.stop.prevent="openLink($event)"
                            target="_blank" role="button">Отвори</a>
                     </b-tooltip>
                 </div>
@@ -33,6 +36,13 @@
                 type: Object,
                 required: true,
             },
-        }
+        },
+        methods: {
+            openLink: function () {
+                this.$ga('send', 'event', 'service', 'open', this.service.path)
+                this.$ga('send', 'event', 'outbound', 'click', this.service.link)
+                window.open(this.service.link, '_blank')
+            }
+        },
     }
 </script>

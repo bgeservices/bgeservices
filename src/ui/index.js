@@ -3,6 +3,7 @@ var VueRouter = require('vue-router')
 
 Vue.use(VueRouter)
 Vue.use(require('bootstrap-vue'))
+Vue.use(require('./ga'))
 
 Vue.component('fragment-navbar', require('./fragments/navbar.vue'))
 Vue.component('fragment-service', require('./fragments/service.vue'))
