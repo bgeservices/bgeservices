@@ -9,7 +9,6 @@
 // }
 
 var app = module.exports = {
-  backend: require('./src/backend'),
   ui: require('./src/ui'),
 }
 
