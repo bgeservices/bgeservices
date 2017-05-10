@@ -5,7 +5,6 @@ Vue.use(VueRouter)
 Vue.use(require('bootstrap-vue'))
 
 Vue.component('fragment-navbar', require('./fragments/navbar.vue'))
-Vue.component('fragment-nsi-services', require('./fragments/nsi-services.vue'))
 Vue.component('fragment-service', require('./fragments/service.vue'))
 
 var router = new VueRouter({
