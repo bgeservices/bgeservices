@@ -19,6 +19,7 @@
     "uglifyify": "^3.0.4"
   },
   "dependencies": {
+    "bootstrap-vue": "^0.15.6",
     "bulk-require": "^1.0.0",
     "bulkify": "^1.4.2",
     "cp-cli": "^1.0.2",
@@ -51,7 +52,7 @@
     "build": "npm run build:static && npm run build:js",
     "build:static": "cp-cli public build",
     "build:js": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o build/styles.css ] --debug -e index.js | uglifyjs -c warnings=false -m > build/index.js",
-    "deploy": "gh-pages -d build -t",
+    "deploy": "gh-pages -d build -t -o gh-pages -b master",
     "dev": "budo index.js --live -d public -- -p browserify-hmr -t aliasify",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
