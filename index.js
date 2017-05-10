@@ -9,6 +9,7 @@
 // }
 
 var app = module.exports = {
+  services: require('./src/services'),
   ui: require('./src/ui'),
 }
 
