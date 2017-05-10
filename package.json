@@ -1,6 +1,6 @@
 {
   "companyName": "bggovlinks",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Useful links for bulgarian government agencies",
   "main": "index.js",
   "author": "Geno Roupsky <geno@roupsky.name> (https://github.com/groupsky)",
